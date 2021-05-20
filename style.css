@@ -6,3 +6,6 @@
 
 .carousel-control-next-icon, .carousel-control-prev-icon 
 { background-color: silver; }
+
+.card
+{ margin : 15px; }
