@@ -104,7 +104,7 @@
 						<div class="card"> 
 							<div class="card-header"><i class="fa fa-search"></i> Rechercher </div> 
 							<div class="card-body"> 
-								<form method="post" action="#"> 
+								<form method="post" action="#" id="form_recherche"> 
 									<div class="form-group"> 
 										<input class="form-control" type="text" name="recherche" id="recherche" /> 
 									</div> 
@@ -178,7 +178,27 @@
 			</div> 
 		</div> 
 		<!-- Fin boite de dialogue -->
+		< script type="text/javascript"> 
+		(function() {
+			//recuperer l'element html
+			let form = document.getElementById("form_recherche");
+	
+			if (form)
+			{
+				form.addEventListener('submit', function(event) {
+					let input_textbox = event.currentTarget.querySelector('input');
 
+					//verifie si la valeur est renseignee
+					if(!input.value){
+						console.log("caca");
+						event.preventDefault();
+						$('#myModal').modal('show');
+					}
+				});
+			}
+		})();
+</script>
+		<script src="js/mesFonctions.js" ></script>
 		<script src="js/jquery/dist/jquery.slim.min.js" ></script>
 		<script src="js/popperjs/dist/umd/popper.min.js" ></script>
 		<script src="js/bootstrap4/dist/js/bootstrap.min.js" ></script>
