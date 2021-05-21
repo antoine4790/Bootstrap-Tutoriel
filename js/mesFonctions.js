@@ -9,8 +9,7 @@ function ValideRecherche() {
 			let input_textbox = event.currentTarget.querySelector('input');
 
 			//verifie si la valeur est renseignee
-			if(!input.value){
-				console.log("caca");
+			if(!input_textbox.value){
 				event.preventDefault();
 				$('#myModal').modal('show');
 			}
